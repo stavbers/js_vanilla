@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(event){
+  
   const accordEl = document.querySelectorAll('.accordion-body__elm')
   const accordLinks = document.querySelectorAll('.accordion__item')
-  
+
   function accordion(){
+    hideItem(accordEl)
+    showItem(accordEl[0])
     accordLinks.forEach((el, indx)=> {
-      
       el.addEventListener('click', ()=> {
         hideItem(accordEl)
         showItem(accordEl[indx])
@@ -19,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function(event){
   function hideItem(el){
   el.forEach(element => {
     element.classList.add('accordion-hide')
-    
   });
   }
 
